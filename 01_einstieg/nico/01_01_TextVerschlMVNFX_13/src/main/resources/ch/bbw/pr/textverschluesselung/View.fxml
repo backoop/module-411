@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="95.0" prefWidth="376.0" spacing="5.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbw.pr.textverschluesselung.Controller">
+   <children>
+      <HBox spacing="5.0" VBox.vgrow="NEVER">
+         <children>
+            <VBox spacing="5.0">
+               <children>
+                  <Label prefHeight="25.0" text="Eingabe:" />
+                  <Label prefHeight="25.0" text="Verschleiert:" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="tfInput" maxWidth="1.7976931348623157E308" prefHeight="25.0" />
+                  <TextField fx:id="tfOutput" maxWidth="1.7976931348623157E308" prefHeight="25.0" />
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" spacing="5.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#aufgabe1" prefHeight="25.0" prefWidth="80.0" text="Aufgabe1" />
+            <Button mnemonicParsing="false" onAction="#aufgabe2" prefHeight="25.0" prefWidth="80.0" text="Aufgabe2" />
+            <Button mnemonicParsing="false" onAction="#aufgabe3" prefHeight="25.0" prefWidth="80.0" text="Aufgabe3" />
+            <Button mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="80.0" text="Clear" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>
