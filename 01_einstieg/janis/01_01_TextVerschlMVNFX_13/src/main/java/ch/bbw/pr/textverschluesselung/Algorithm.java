@@ -10,7 +10,16 @@ package ch.bbw.pr.textverschluesselung;
 public class Algorithm {
 	static public String disguise(String input) {
 		//Hier ergänzen Aufgabe 1
-		return input;
+		char[] value = input.toCharArray();
+		System.out.println(value);
+		int half = input.length()/2;
+
+		for (int i=0; i < half; i++){
+			char temp = value[i];
+			value[i] = value[input.length() - i - 1];
+			value[input.length() - i -1] = temp;
+		}
+		return new String(value);
 	}
 	
 	static public String toUpper(String input) {
