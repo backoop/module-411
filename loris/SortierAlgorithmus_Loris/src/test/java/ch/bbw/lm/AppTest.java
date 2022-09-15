@@ -1,4 +1,4 @@
-package org.example;
+package ch.bbw.lm;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
