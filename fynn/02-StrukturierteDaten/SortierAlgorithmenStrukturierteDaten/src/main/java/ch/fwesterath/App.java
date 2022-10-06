@@ -111,6 +111,7 @@ public class App {
         persons[98] = new Person("Natalie",  "Hancock", 1.54, 42, 34);
         persons[99] = new Person("Walker",  "Justice", 1.66, 39, 27);
 
+
         Person[] unsortedPersons = persons.clone();
         for (int i = 0; i < persons.length; i++) {
             for (int j = 0; j < persons.length; j++) {

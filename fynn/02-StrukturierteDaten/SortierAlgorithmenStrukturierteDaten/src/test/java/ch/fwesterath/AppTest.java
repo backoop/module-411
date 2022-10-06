@@ -1,4 +1,4 @@
-package org.example;
+package ch.fwesterath;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
