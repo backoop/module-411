@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="5.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbw.pr.sort.MainViewController">
+   <children>
+      <HBox fx:id="multipleBarPane" prefHeight="700.0" prefWidth="800.0" spacing="5.0" VBox.vgrow="ALWAYS">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_CENTER" spacing="5.0">
+         <children>
+            <ComboBox fx:id="cboxSorter" prefWidth="150.0" />
+            <Button mnemonicParsing="false" onAction="#handlePrepare" text="Prepare" />
+            <Button mnemonicParsing="false" onAction="#handleAnimate" text="Animate" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
