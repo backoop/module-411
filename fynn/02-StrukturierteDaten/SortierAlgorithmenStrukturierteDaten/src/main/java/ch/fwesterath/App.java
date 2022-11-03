@@ -1,6 +1,12 @@
 package ch.fwesterath;
 
+import ch.fwesterath.model.Human;
 import ch.fwesterath.model.Person;
+import ch.fwesterath.model.PersonHeightComperator;
+import ch.fwesterath.model.PersonComparator;
+
+import java.util.Arrays;
+
 /**
  * Hello world!
  *
@@ -24,7 +30,7 @@ public class App {
         persons[11] = new Person("Sara",  "Warner", 1.8, 40, 36);
         persons[12] = new Person("Driscoll",  "Burch", 1.74, 35, 23);
         persons[13] = new Person("Charissa",  "Fulton", 1.91, 42, 28);
-        persons[14] = new Person("Hilel",  "Tyson", 1.52, 41, 23);
+        persons[14] = new Person("Abbot",  "Tyson", 1.52, 41, 23);
         persons[15] = new Person("Warren",  "Holmes", 1.86, 42, 21);
         persons[16] = new Person("Aladdin",  "Meyer", 1.76, 42, 34);
         persons[17] = new Person("Geoffrey",  "Lindsay", 1.67, 39, 39);
@@ -111,7 +117,6 @@ public class App {
         persons[98] = new Person("Natalie",  "Hancock", 1.54, 42, 34);
         persons[99] = new Person("Walker",  "Justice", 1.66, 39, 27);
 
-
         Person[] unsortedPersons = persons.clone();
         for (int i = 0; i < persons.length; i++) {
             for (int j = 0; j < persons.length; j++) {
@@ -130,5 +135,41 @@ public class App {
         for (int i = 0; i < 4; i++) {
             System.out.println(persons[i]);
         }
+
+//        Sort with comperator
+        System.out.println("\n\n");
+        System.out.println("--------------------------------");
+        System.out.println("|   [Sorted with comperator]   |");
+        System.out.println("--------------------------------");
+        Person[] unsortedPersons2 = persons.clone();
+        Arrays.sort(persons, new PersonComparator());
+
+        System.out.println("--- Unsorted ---");
+        for (int i = 0; i < 4; i++) {
+            System.out.println(unsortedPersons2[i]);
+        }
+        System.out.println("--- Sorted ---");
+        for (int i = 0; i < 4; i++) {
+            System.out.println(persons[i]);
+        }
+
+//        Sort with AgeComperator
+        System.out.println("\n\n");
+        System.out.println("--------------------------------");
+        System.out.println("|  [Sorted with AgeComperator]  |");
+        System.out.println("--------------------------------");
+        Person[] unsortedPersons3 = persons.clone();
+        Arrays.sort(persons, new PersonHeightComperator());
+
+        System.out.println("--- Unsorted ---");
+        for (int i = 0; i < 4; i++) {
+            System.out.println(unsortedPersons3[i]);
+        }
+        System.out.println("--- Sorted ---");
+        for (int i = 0; i < 4; i++) {
+            System.out.println(persons[i]);
+        }
+
+
     }
 }
